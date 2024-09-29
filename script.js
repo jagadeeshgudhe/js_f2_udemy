@@ -1,3 +1,6 @@
+
+/*
+
 // 1. Activating Strict Mode
 'use strict';
 function strictModeExample() {
@@ -145,4 +148,4 @@ const box = document.querySelector('.box');
 box.style.width = '200px';
 box.style.height = '200px';
 box.style.backgroundColor = 'purple';
-console.log('Box styles updated');
+console.log('Box styles updated'); */
