@@ -1,143 +1,134 @@
 // 1. Start by using Strict Mode
 'use strict';
 function showStrictModeExample() {
-  let x = 10;  // Initialize x with 10
-  console.log(x);  // Log x to the console
+  let x = 10;  
+  console.log(x);  
 }
-showStrictModeExample();  // Call the function
+showStrictModeExample();  
 
 // 2. Defining a greeting function
 function greetUser(name) {
-  console.log('Hello ' + name + '!');  // Greeting the user
+  console.log('Hello ' + name + '!');  
 }
-greetUser('Suneel');  // Call greetUser with 'Suneel'
+greetUser('Suneel');  
 
-// 3. Understanding Function Declarations and Expressions
-
-// Function Declaration
-function addNumbers(a, b) {
-  return a + b;  // Return the sum of a and b
+// 3. Function Declaration for Addition
+function add(a, b) {
+  return a + b;  
 }
-console.log(addNumbers(2, 3));  // Log the result of adding 2 and 3
+console.log(add(2, 3));  
 
-// Function Expression
-const multiplyNumbers = function(a, b) {
-  return a * b;  // Return the product of a and b
+// 4. Function Expression for Multiplication
+const multiply = function(a, b) {
+  return a * b;  
 };
-console.log(multiplyNumbers(2, 3));  // Log the result of multiplying 2 and 3
+console.log(multiply(2, 3));  
 
-// 4. Using Arrow Functions
-const greetWithArrow = (name) => {
-  return `Hello, ${name}!`;  // Return a greeting message
+// 5. Using Arrow Functions for Greeting
+const greetUserArrow = (name) => {
+  return `Hello, ${name}!`;  
 };
-console.log(greetWithArrow('Suneel'));  // Log the greeting
+console.log(greetUserArrow('Suneel'));  
 
-// 5. Functions that Call Other Functions
-function squareNumber(num) {
-  return num * num;  // Return the square of num
+// 6. Functions Calling Other Functions
+function square(num) {
+  return num * num;  
 }
-
-function displaySquareOfNumber(n) {
-  console.log(`The square of ${n} is: ${squareNumber(n)}`);  // Log the square of n
+function displaySquare(n) {
+  console.log(`The square of ${n} is: ${square(n)}`);  
 }
-displaySquareOfNumber(4);  // Call the function with 4
+displaySquare(4);  
 
-// 6. Basic Array Operations
+// 7. Basic Array Operations (Methods)
 let fruits = ['Apple', 'Banana', 'Mango'];
-
-// Add and remove elements from the array
-fruits.push('Orange');  // Add Orange to the end of the array
-fruits.unshift('Strawberry');  // Add Strawberry to the start
-fruits.pop();  // Remove the last element (Orange)
-fruits.shift();  // Remove the first element (Strawberry)
-
+// Adding and removing elements
+fruits.push('Orange');   
+fruits.unshift('Strawberry');  
+fruits.pop();            
+fruits.shift();          
 // Accessing elements
-console.log('First fruit:', fruits[0]);  // Log the first element
-console.log('Last fruit:', fruits[fruits.length - 1]);  // Log the last element
-
-// Finding an element's index
+console.log('First fruit:', fruits[0]);  
+console.log('Last fruit:', fruits[fruits.length - 1]);  
+// Finding elements
 let index = fruits.indexOf('Banana');
 if (index !== -1) {
-  console.log('Banana is at index:', index);  // Log the index of Banana
+  console.log('Banana is at index:', index);  
 }
-
-// Slicing the array
-let slicedFruits = fruits.slice(0, 2);  // Get the first two elements
-console.log('Sliced fruits:', slicedFruits);  // Log the sliced array
-
-// Splicing the array (inserting and removing elements)
-fruits.splice(1, 1, 'Grapes', 'Pineapple');  // Replace Banana with Grapes and Pineapple
-console.log('Fruits after splice:', fruits);  // Log the updated array
-
+// Slicing arrays
+let slicedFruits = fruits.slice(0, 2);  
+console.log('Sliced fruits:', slicedFruits);  
+// Splicing arrays (inserting and removing elements)
+fruits.splice(1, 1, 'Grapes', 'Pineapple');  
+console.log('Fruits after splice:', fruits);  
 // Merging arrays
 let moreFruits = ['Papaya', 'Kiwi'];
-let allFruits = fruits.concat(moreFruits);  // Combine the two arrays
-console.log('All Fruits:', allFruits);  // Log all fruits
+let allFruits = fruits.concat(moreFruits);  
+console.log('All Fruits:', allFruits);  
 
-// 7. Introduction to Objects
+// 8. Introduction to Objects
 const person = {
   name: 'Jagadeesh',
   age: 25,
-  profession: 'Web Developer'  // Details about a person
+  profession: 'Web Developer'  
 };
-console.log(person);  // Log the person object
+console.log(person);  
 
-// 8. Dot Notation vs. Bracket Notation
+// 9. Dot vs. Bracket Notation
 let car = {
   brand: 'Toyota',
-  model: 'Camry'  // Car details
+  model: 'Camry'  
 };
-console.log(car.brand);  // Accessing brand using dot notation
-console.log(car['model']);  // Accessing model using bracket notation
+console.log(car.brand);  
+console.log(car['model']);  
 
-// 9. Using Methods in Objects
+// 10. Object Methods
 const personDetails = {
   firstName: 'Suneel',
   lastName: 'Kumar',
   getFullName: function() {
-    return this.firstName + ' ' + this.lastName;  // Return full name
-  }
+    return this.firstName + ' ' + this.lastName;  
+  }  
 };
-console.log(personDetails.getFullName());  // Log the full name
+console.log(personDetails.getFullName());  
 
-// 10. The for Loop
+// 11. The for Loop
 for (let i = 0; i < 5; i++) {
-  console.log(`Iteration ${i}`);  // Log each iteration
+  console.log(`Iteration ${i}`);  
 }
 
-// Looping through an array with breaks and continues
+// 12. Looping Arrays, Breaking and Continuing
 const numbers = [1, 2, 3, 4, 5];
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] === 3) continue;  // Skip the number 3
-  if (numbers[i] === 5) break;  // Stop the loop at 5
-  console.log(numbers[i]);  // Log the number
+  if (numbers[i] === 3) continue;  
+  if (numbers[i] === 5) break;  
+  console.log(numbers[i]);  
 }
 
-// The while Loop
+// 13. The while Loop
 let count = 0;
 while (count < 5) {
-  console.log('Count is: ' + count);  // Log the current count
-  count++;  // Increment count
+  console.log('Count is: ' + count);  
+  count++;  
 }
 
-// DOM Manipulation
-document.body.style.backgroundColor = 'lightblue';  // Change the background color
-console.log('Background color changed');  // Log the change
+// 14. DOM and DOM Manipulation
+document.body.style.backgroundColor = 'lightblue';  
+console.log('Background color changed');  
 
-// Selecting and updating elements in the DOM
+// 15. Selecting and Manipulating Elements
 const heading = document.querySelector('h1');
-heading.textContent = 'Updated Title!';  // Change the heading text
-console.log('Heading updated');  // Log the update
+heading.textContent = 'Updated Title!';  
+console.log('Heading updated');  
 
-// Handling Click Events
+// 16. Handling Click Events
 const button = document.querySelector('button');
 button.addEventListener('click', function() {
-  alert('Button Clicked!');  // Alert when the button is clicked
+  alert('Button Clicked!');  
 });
 
-// Updating CSS styles
+// 17. Manipulating CSS Styles
 const box = document.querySelector('.box');
-box.style.width = '200px';  // Set the width
-box.style.height = '200px';  // Set the height
-box.style.backgroundColor = 'purple';  // Change background color
-console.log('Box styles updated');  // Log the style changes
+box.style.width = '200px';  
+box.style.height = '200px';  
+box.style.backgroundColor = 'purple';  
+console.log('Box styles updated');  
